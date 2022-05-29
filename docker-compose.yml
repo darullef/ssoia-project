@@ -8,16 +8,16 @@ services:
       - "53:53/udp"
       - "80:80/tcp"
     environment:
-      TZ: 'Europe/Warsaw'
+      TZ: "Europe/Warsaw"
     volumes:
-      - './pihole/etc-pihole:/etc/pihole'
-      - './pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
+      - "./pihole/etc-pihole:/etc/pihole"
+      - "./pihole/etc-dnsmasq.d:/etc/dnsmasq.d"
   homeasistant:
     container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
     volumes:
-      - ./ha:/config
-      - ./ha/etc/localtime:/etc/localtime:ro
+      - "./ha:/config"
+      - "./ha/etc/localtime:/etc/localtime:ro"
     restart: unless-stopped
     privileged: true
     network_mode: host
