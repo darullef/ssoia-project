@@ -4,3 +4,4 @@
 ./ha*
 ./pihole
 ./pihole/*
+.env
